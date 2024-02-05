@@ -1,0 +1,114 @@
+@import '../Mixines.module.scss';
+
+.Main {
+    @include Main;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+    position: relative;
+
+    &__Header {
+        @include Center(78px);
+        top: 0px;
+        left: 0px;
+        z-index: 4;
+    }
+
+    &__WelcomeToLearn {
+        @include Center(400px);
+        z-index: 2;
+
+        @media screen and (max-width: 770px) {
+            @include Center(516px);
+            justify-items: left;
+        }
+    }
+
+    &__WhyMarczypek {
+        @include Center(400px);
+        z-index: 2;
+
+        @media screen and (max-width: 770px) {
+            @include Center(635px);
+            justify-items: left;
+        }
+    }
+
+    &__AboutCourse {
+        @include Center(722px);
+        background-color: #42BBFF;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+        z-index: 2;
+
+        @media screen and (max-width: 1300px) {
+            @include Center(572px);
+        }
+
+        @media screen and (max-width: 770px) {
+            @include Center(594px);
+            justify-items: left;
+            align-items: center;
+        }
+    }
+
+    &__CoursePlan {
+        @include Center(474px);
+        z-index: 2;
+
+        @media screen and (max-width: 770px) {
+            @include Center(632px);
+        }
+    }
+
+    &__PricingPlans {
+        @include Center(632px);
+        z-index: 2;
+
+        @media screen and (max-width: 770px) {
+            @include Center(828px);
+        }
+    }
+
+    &__FinalBlock {
+        display: block;
+        width: 100%;
+        height: 1193px;
+        margin: 0px;
+        padding: 0px;
+        z-index: 2;
+
+        @media screen and (max-width: 770px) {
+            height: 850px;
+        }
+
+        &__Feedbacks {
+            @include Center(812px);
+            background-color: #42BBFF;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            z-index: 3;
+
+            @media screen and (max-width: 770px) {
+                @include Center(482px);
+            }
+        }
+    
+        &__Footer {
+            @include Center(381px);
+            background-color: #2F2F2F;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            z-index: 3;
+
+            @media screen and (max-width: 770px) {
+                @include Center(368px);
+            }
+        }
+    }
+}
+
+

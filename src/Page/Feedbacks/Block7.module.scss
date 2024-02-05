@@ -1,0 +1,114 @@
+@import '../../Fonts.module.scss';
+@import '../../Mixines.module.scss';
+
+.Block7 {
+    @include Block(1300px, 601px, flex, inherit, 0px, 0px);
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1300px) {
+        @include Block(1300px, 501px, flex, inherit, 0px, 0px);
+    }
+
+    @media screen and (max-width: 770px) {
+        max-width: 361px;
+        height: 470px;
+        align-items: flex-start;
+    }
+
+    &__Text {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        align-self: center;
+        @include Font(48px, #fff, "HK-Grotesk-SemiBold");
+
+        @media screen and (max-width: 770px) {
+            @include Font(30px, #fff, "HK-Grotesk-SemiBold");
+        }
+    }
+
+    &__PersonsBlock {
+        @include Block(1300px, 502px, flex, inherit, 0px, 0px);
+        justify-content: space-between;
+
+        @media screen and (max-width: 1300px) {
+            @include Block(1300px, 362px, flex, inherit, 0px, 0px);
+        }
+
+        @media screen and (max-width: 770px) {
+            &__Person {
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        &__Person {
+            @include Block(533px, 502px, flex, inherit, 0px, 0px);
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+            @media screen and (max-width: 1300px) {
+                @include Block(433px, 502px, flex, inherit, 0px, 0px);
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            @media screen and (max-width: 770px) {
+                max-width: 361px;
+                height: 324px;
+            }
+
+            &__Img {
+                max-width: 122px;
+                max-height: 122px;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                border-radius: 50%;
+
+                @media screen and (max-width: 770px) {
+                    max-width: 72px;
+                    max-height: 72px;
+                }
+            }
+
+            &__Text {
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+                overflow-wrap: break-word;
+                max-width: 533px;
+                width: 100%;
+                @include Font(18px, #fff, "HK-Grotesk-SemiBold");
+
+                @media screen and (max-width: 1300px) {
+                    @include Font(12px, #fff, "HK-Grotesk-SemiBold");
+                }
+
+                @media screen and (max-width: 770px) {
+                    max-width: 361px;
+                }
+            }
+
+            &__Stars {
+                max-width: 192px;
+                max-height: 24px;
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+
+                @media screen and (max-width: 770px) {
+                    max-width: 192px;
+                    max-height: 24px;
+                }
+            }
+        }
+    }
+}

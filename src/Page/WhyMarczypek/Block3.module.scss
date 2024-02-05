@@ -1,0 +1,120 @@
+@import '../../Fonts.module.scss';
+@import '../../Mixines.module.scss';
+
+.Block3 {
+    @include Block(1276px, 400px, flex, inherit, 0px, 0px);
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (max-width: 770px) {
+        height: 635px;
+    }
+
+    &__Lines {
+        @include Block(1276px, 50px, flex, inherit, 0px, 0px);
+        justify-content: space-between;
+        align-items: center;
+
+        &__SmallLine {
+            @include Block(150px, 4px, block, #000, 0px, 0px);
+            @media screen and (max-width: 1300px) {
+                @include Block(180px, 3px, block, #000, 0px, 0px);
+                margin-left: 15px;
+            }
+            @media screen and (max-width: 770px) {
+                display: none;
+            }
+        }
+
+        &__Inscription {
+            display: inline-block;
+            padding: 0px;
+            margin: 0px;
+            @include Font(48px, #000, "HK-Grotesk-SemiBold");
+
+            @media screen and (max-width: 1300px) {
+                @include Font(30px, #000, "HK-Grotesk-SemiBold");
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            &__Blue {
+                color: #00A3FF;
+            }
+        }
+
+        &__BigLine {
+            @include Block(593px, 4px, block, #000, 0px, 0px);
+            @media screen and (max-width: 1300px) {
+                @include Block(693px, 3px, block, #000, 0px, 0px);
+                margin-right: 15px;
+            }
+            @media screen and (max-width: 770px) {
+                display: none;
+            }
+        }
+    }
+
+    &__Description {
+        @include Block(1276px, 200px, flex, inherit, 0px, 0px);
+        justify-content: space-between;
+
+        @media screen and (max-width: 1300px) {
+            margin-left: 15px;
+        }
+
+        @media screen and (max-width: 770px) {
+            flex-direction: column;
+            height: 558px;
+        }
+
+        &__Elem {
+            @include Block(390px, 200px, flex, inherit, 0px, 0px);
+            justify-content: space-between;
+            flex-direction: column;
+
+
+            @media screen and (max-width: 1300px) {
+                margin-right: 15px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 770px) {
+                height: 166px;
+                text-align: left;
+            }
+
+            &__PicBlock {
+                @include Block(390px, 82px, grid, inherit, 0px, 0px);
+                justify-content: center;
+
+                @media screen and (max-width: 770px) {
+                    height: 61px;
+                    justify-content: left;
+                }
+
+                &__Img {
+                    width: 82px;
+                    height: 82px;
+                    
+                    @media screen and (max-width: 770px) {
+                        width: 61px;
+                        height: 61px;
+                        margin-left: 7px;
+                    }
+                }
+            }
+
+            &__Text {
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+                @include Font(20px, #000, "HK-Grotesk-Bold");
+
+                @media screen and (max-width: 1300px) {
+                    @include Font(15px, #000, "HK-Grotesk-Bold");
+                }
+            }
+        }
+    }
+}
